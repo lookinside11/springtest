@@ -12,10 +12,5 @@ public class testRun {
         p1.sayHi();
         p1.destroy();
 
-
-
-
-
-
     }
 }
