@@ -19,5 +19,5 @@ Person p= (Person) ac.getBean("person");
   *如果xml定义了实现BeanPostProcessor接口的工具类，那么在实例化的bean的时候，工具类的postProcessBeforeInitialization  和  postProcessAfterInitialization 方法会被依次调用。
 
 6：AOP编程。
-
+    针对对象的过滤编程，将对象想象成功能，对所有的功能进行切割，统一注入功能。就叫切面编程
 
