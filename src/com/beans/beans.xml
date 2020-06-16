@@ -3,9 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="person" scope="singleton" class="com.beans.Person">
+
+    <bean id="MyBeanProcessTool" class="com.beans.MyBeanProcessTool"/>
+
+    <bean id="person" scope="prototype" class="com.beans.Person"  >
         <property name="name" value="小明"/>
     </bean>
 
-    <bean id="MyBeanProcessTool" class="com.beans.MyBeanProcessTool"/>
+
 </beans>

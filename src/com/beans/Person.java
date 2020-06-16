@@ -41,6 +41,8 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         System.out.println("上下文接口方法---"+applicationContext.toString());
+        System.out.println("=====");
+
     }
 
 

@@ -1,0 +1,23 @@
+1: 控制反转,IOC。就是将类放在xml里面,然后让spring的框架来管理类bean,这样不用自己去新建bean,需要的时候就用
+ApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
+Person p= (Person) ac.getBean("person");
+
+类似这样的来调用，这就是所谓的控制反转，反转到框架管理对象。
+
+2:类与类之间的调用,可以用都在xml里定义,比如说,在xml里定义两个bean,A和B,然后A里面有个属性,是B类的类型,那么就可以通过ref的方式，将B注入到A，即使是类也可以注入。这就是DI，也叫依赖注入，A和B是有依赖关系的，A依赖B。
+
+3：在xml里配置bean的时候，有个type属性，可以定义为“singleton”或“prototype”，代表这个bean是唯一的，还是可以多次定义生成的。
+
+4：DI规范编程，先定义一个接口，然后再定义类，再在xml里定义bean，这样有个好处，在编程的时候通过接口来实例化对象，然后完成操作，以后更改的时候，直接换bean就好了，接口不用变，里面的功能也变化了。
+
+5：bean的生命周期
+    *bean被载入到容器里面
+    *容器寻找bean的定义信息并实例化
+    *使用依赖注入，按照xml的定义，将信息注入到bean的属性里
+    *如果bean实现了BeanNameAware接口，那么可以调用setBeanName方法，得到bean的方法。
+    *如果bean实现了BeanFactoryAware接口，那么可以调用setBeanFactory方法，得到bean工厂的引用。
+  *如果xml定义了实现BeanPostProcessor接口的工具类，那么在实例化的bean的时候，工具类的postProcessBeforeInitialization  和  postProcessAfterInitialization 方法会被依次调用。
+
+6：AOP编程。
+
+

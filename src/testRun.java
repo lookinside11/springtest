@@ -8,8 +8,16 @@ public class testRun {
     public static void main(String[] args) {
 
         ApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
-        Person p= (Person) ac.getBean("person");
-        p.sayHi();
+        Person p1= (Person) ac.getBean("person");
+        Person p2= (Person) ac.getBean("person");
+
+
+        System.out.println("_----------__");
+        p1.sayHi();
+        p2.sayHi();
+
+
+
 
 
     }
