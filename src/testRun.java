@@ -8,5 +8,6 @@ public class testRun {
         //FactoryBean fb=new ClassPathXmlApplicationContext(("com/beans/beans.xml");
         //ApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
 
+        System.out.println("jkdfjkd");
     }
 }
