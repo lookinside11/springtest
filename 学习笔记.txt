@@ -11,8 +11,8 @@ Person p= (Person) ac.getBean("person");
 4：DI规范编程，先定义一个接口，然后再定义类，再在xml里定义bean，这样有个好处，在编程的时候通过接口来实例化对象，然后完成操作，以后更改的时候，直接换bean就好了，接口不用变，里面的功能也变化了。
 
 5：bean的生命周期（下面是按顺序执行的）
-    ①*bean被载入到容器里面
-    ②*容器寻找bean的定义信息并实例化
+    ①*bean被载入到容器里面。
+    ②*容器寻找bean的定义信息并实例化。
     ③*使用依赖注入，按照xml的定义，将信息注入到bean的属性里
     ④*如果bean实现了BeanNameAware接口，那么可以调用setBeanName方法，得到bean的方法。
     ⑤*如果bean实现了BeanFactoryAware接口，那么可以调用setBeanFactory方法，得到bean工厂的引用。
