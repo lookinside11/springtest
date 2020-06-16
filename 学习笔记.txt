@@ -10,15 +10,18 @@ Person p= (Person) ac.getBean("person");
 
 4：DI规范编程，先定义一个接口，然后再定义类，再在xml里定义bean，这样有个好处，在编程的时候通过接口来实例化对象，然后完成操作，以后更改的时候，直接换bean就好了，接口不用变，里面的功能也变化了。
 
-5：bean的生命周期
-    *bean被载入到容器里面
-    *容器寻找bean的定义信息并实例化
-    *使用依赖注入，按照xml的定义，将信息注入到bean的属性里
-    *如果bean实现了BeanNameAware接口，那么可以调用setBeanName方法，得到bean的方法。
-    *如果bean实现了BeanFactoryAware接口，那么可以调用setBeanFactory方法，得到bean工厂的引用。
-  *如果xml定义了实现BeanPostProcessor接口的工具类，那么在实例化的bean的时候，工具类的postProcessBeforeInitialization  和  postProcessAfterInitialization 方法会被依次调用。
-  但中间如果bean实现了InitializingBean接口，那么中间还要执行一个afterPropertiesSet方法，说明属性已经被设置了。
-  *最后，如果bean实现了DisposableBean接口，那么通过这个接口的destroy方法，在对象被销毁的时候，就能得到通知。
+5：bean的生命周期（下面是按顺序执行的）
+    ①*bean被载入到容器里面
+    ②*容器寻找bean的定义信息并实例化
+    ③*使用依赖注入，按照xml的定义，将信息注入到bean的属性里
+    ④*如果bean实现了BeanNameAware接口，那么可以调用setBeanName方法，得到bean的方法。
+    ⑤*如果bean实现了BeanFactoryAware接口，那么可以调用setBeanFactory方法，得到bean工厂的引用。
+    ⑥*如果xml定义了实现BeanPostProcessor接口的工具类，那么在实例化的bean的时候，工具类的postProcessBeforeInitialization  和  postProcessAfterInitialization 方法会被依次调用。
+    ⑦但中间如果bean实现了InitializingBean接口，那么中间还要执行一个afterPropertiesSet方法，说明属性已经被设置了。
+    ⑧* 如果定义了xml的里面的bean的init方法，那么这个时候就执行init方法，这个方法可以是bean类里面的任何一个函数。
+    ⑨*最后，如果bean实现了DisposableBean接口，那么通过这个接口的destroy方法，在对象被销毁的时候，就能得到通知。
+    -0-0-0-0-
+
 
 6：AOP编程。
     针对对象的过滤编程，将对象想象成功能，对所有的功能进行切割，统一注入功能。就叫切面编程

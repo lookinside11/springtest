@@ -16,6 +16,11 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
         return name;
     }
 
+    public void 初始化方法()
+    {
+        System.out.println("我自己的初始化方法了--");
+    }
+
     public void setName(String name) {
         System.out.println("属性注入setname---"+name);
         this.name = name;
