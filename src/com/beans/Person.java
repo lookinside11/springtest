@@ -1,14 +1,12 @@
 package com.beans;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, BeanPostProcessor
+public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,  InitializingBean, DisposableBean
 {
 
 
@@ -25,7 +23,7 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
 
     public  void sayHi()
     {
-        System.out.println("你好--"+this.name);
+        System.out.println("--------------你好--"+this.name+"--------------------");
     }
 
     @Override
@@ -46,5 +44,13 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     }
 
 
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("属性被设置以后的");
+    }
 
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("bean被他妈销毁了");
+    }
 }
