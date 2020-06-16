@@ -8,7 +8,7 @@ public class testRun {
     public static void main(String[] args) throws Exception {
 
         ApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
-        Person p1= (Person) ac.getBean("person");
+        Person p1= ac.getBean("person",Person.class);
         p1.sayHi();
         p1.destroy();
 
