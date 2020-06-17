@@ -27,3 +27,8 @@ Person p= (Person) ac.getBean("person");
 6：AOP编程。
     针对对象的过滤编程，将对象想象成功能，对所有的功能进行切割，统一注入功能。就叫切面编程
 
+7:bean装配
+       bean里面，如果是成员属性是list  或者是set属性，那么就要把元素的每个成员bean都在xml里定义好，然后在主类通过 list   或set  子节点来ref对象元素，实现对主类装配
+       xml里面通过list节点定义。
+
+

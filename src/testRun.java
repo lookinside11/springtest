@@ -12,9 +12,9 @@ public class testRun {
     public static void main(String[] args) throws Exception {
 
         ApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
-        Person p1= ac.getBean("person",Person.class);
-        p1.destroy();
-        p1=null;
+        Person p1= (Person) ac.getBean("person");
+        System.out.println(p1.getName());
+        ac=null;
 
 
 

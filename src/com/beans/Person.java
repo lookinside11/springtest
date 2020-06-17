@@ -1,6 +1,5 @@
 package com.beans;
 
-
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Service
+
 public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,  InitializingBean, DisposableBean
 {
     public Person() {
@@ -20,6 +19,10 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     }
 
     private  String name;
+    public void setName(String name) {
+        System.out.println("属性注入setname---"+name);
+        this.name = name;
+    }
     public String getName() {
         return name;
     }
@@ -35,10 +38,7 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     {
         System.out.println("--我自定义的销毁方法！--");
     }
-    public void setName(String name) {
-        System.out.println("属性注入setname---"+name);
-        this.name = name;
-    }
+
 
     public  void sayHi()
     {
