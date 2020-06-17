@@ -80,6 +80,6 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
 
     @Override
     public void destroy() throws Exception {
-        System.out.println("bean被他妈销毁了");
+        System.out.println("bean被dispose销毁了");
     }
 }

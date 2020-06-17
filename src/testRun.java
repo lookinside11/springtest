@@ -20,9 +20,10 @@ public class testRun {
 
     @Test
     public void show() throws Exception {
-        ClassPathXmlApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
+        ConfigurableApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
         Person p1= ac.getBean("person",Person.class);
-        p1.destroy();
-        ac.close();
+        ac.registerShutdownHook();
+
+
     }
 }
