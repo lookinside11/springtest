@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContextAware;
 
 import javax.annotation.PostConstruct;
 
+
 public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,  InitializingBean, DisposableBean
 {
 
@@ -60,6 +61,7 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     }
 
     @Override
+    @PreDestroy
     public void destroy() throws Exception {
         System.out.println("bean被他妈销毁了");
     }
