@@ -1,33 +1,40 @@
 package com.beans;
 
-import javax.annotation.*;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
-
+@Service
 public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,  InitializingBean, DisposableBean
 {
-
+    public Person() {
+        System.out.println("per是实体类被构造");
+    }
 
     private  String name;
-
     public String getName() {
         return name;
     }
 
-
     @PostConstruct
-    public void 初始化方法()
+    public void definit()
     {
         System.out.println("--我自己的初始化方法了--");
     }
 
+    @PreDestroy
+    public void defdestroy()
+    {
+        System.out.println("--我自定义的销毁方法！--");
+    }
     public void setName(String name) {
         System.out.println("属性注入setname---"+name);
         this.name = name;
@@ -61,8 +68,8 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
         System.out.println("属性被设置以后的");
     }
 
+
     @Override
-    @PreDestroy
     public void destroy() throws Exception {
         System.out.println("bean被他妈销毁了");
     }
