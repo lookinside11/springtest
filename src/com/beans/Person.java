@@ -1,11 +1,13 @@
 package com.beans;
 
-
+import javax.annotation.*;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+
+import javax.annotation.PostConstruct;
 
 public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,  InitializingBean, DisposableBean
 {
@@ -18,7 +20,7 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     }
 
 
-
+    @PostConstruct
     public void 初始化方法()
     {
         System.out.println("--我自己的初始化方法了--");
