@@ -14,11 +14,11 @@ import java.util.ArrayList;
 
 public class testRun {
 
-    public  void main1() throws Exception {
-
+    public static   void main(String[] args) throws Exception {
+        new testRun().show();
     }
 
-    @Test
+
     public void show() throws Exception {
         ConfigurableApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
         Person p1= ac.getBean("person",Person.class);
