@@ -6,7 +6,7 @@
 
     <bean id="MyBeanProcessTool" class="com.beans.MyBeanProcessTool"/>
 
-    <bean id="person" scope="prototype" class="com.beans.Person"   init-method="初始化方法">
+    <bean id="person" scope="prototype" class="com.beans.Person"    >
         <property name="name" value="小明"/>
     </bean>
 

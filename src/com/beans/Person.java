@@ -1,5 +1,6 @@
 package com.beans;
 
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -15,6 +16,8 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     public String getName() {
         return name;
     }
+
+
 
     public void 初始化方法()
     {
