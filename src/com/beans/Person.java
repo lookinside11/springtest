@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
@@ -18,6 +19,7 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
         System.out.println("per是实体类被构造");
     }
 
+
     private  String name;
     public void setName(String name) {
         System.out.println("属性注入setname---"+name);
@@ -27,13 +29,12 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
         return name;
     }
 
-    @PostConstruct
+
     public void definit()
     {
         System.out.println("--我自己的初始化方法了--");
     }
 
-    @PreDestroy
     public void defdestroy()
     {
         System.out.println("--我自定义的销毁方法！--");
