@@ -21,7 +21,7 @@ Person p= (Person) ac.getBean("person");
     ⑧* 如果定义了xml的里面的bean的init方法，那么这个时候就执行init方法，这个方法可以是bean类里面的任何一个函数。这两个方法，也可以在bean类里面，通过
     @PostConstructor和@PreDestroy两个注解来实现，但前提条件是不用xml来定义bean，如果用xml定义bean，就必须在xml里定义init和destroy方法。
     ⑨*最后，如果bean实现了DisposableBean接口，那么通过这个接口的destroy方法，在对象被销毁的时候，就能得到通知。
-    -0-0-0-0-
+    -0-0-0-0-0-0-
 
 
 6：AOP编程。
