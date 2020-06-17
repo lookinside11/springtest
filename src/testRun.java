@@ -15,8 +15,9 @@ public class testRun {
         ConfigurableApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
         Person p1= (Person) ac.getBean("person");
         System.out.println(p1);
+        p1.destroy();
         ac.registerShutdownHook();
-        //ac.registerShutdownHook();
+
 
 
 
