@@ -30,5 +30,13 @@ Person p= (Person) ac.getBean("person");
 7:bean装配
        bean里面，如果是成员属性是list  或者是set属性，那么就要把元素的每个成员bean都在xml里定义好，然后在主类通过 list   或set  子节点来ref对象元素，实现对主类装配
        xml里面通过list节点定义。
-
+8:自动装配用注解装配的xml文件这样写
+  <?xml version="1.0" encoding="UTF-8"?>
+  <beans xmlns="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:context="http://www.springframework.org/schema/context"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+      <context:annotation-config/>
+      <context:component-scan base-package="com.beans"/>
+  </beans>
 

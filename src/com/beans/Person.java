@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-
+@Service
 public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,  InitializingBean, DisposableBean
 {
     public Person() {
@@ -30,11 +30,13 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     }
 
 
+    @PostConstruct
     public void definit()
     {
         System.out.println("--我自己的初始化方法了--");
     }
 
+    @PreDestroy
     public void defdestroy()
     {
         System.out.println("--我自定义的销毁方法！--");

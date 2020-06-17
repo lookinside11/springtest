@@ -12,11 +12,18 @@ import org.springframework.stereotype.Service;
 public class testRun {
     public static void main(String[] args) throws Exception {
 
-        ConfigurableApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
-        Person p1= (Person) ac.getBean("person");
-        System.out.println(p1);
+        //ConfigurableApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
+        //Person p1= (Person) ac.getBean("person");
+        //System.out.println(p1);
+        //p1.destroy();
+        //ac.registerShutdownHook();
+
+        ClassPathXmlApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans.xml");
+        Person p1= ac.getBean("person",Person.class);
         p1.destroy();
-        ac.registerShutdownHook();
+        p1=null;
+
+        ac.close();
 
 
 
