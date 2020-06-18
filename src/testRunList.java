@@ -1,5 +1,6 @@
 import com.beans.Person;
 import com.beansList.DepartMent;
+import com.beansList.DepartTool;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -37,5 +38,7 @@ public class testRunList {
         {
             System.out.println(fuli);
         }
+
+
     }
 }
