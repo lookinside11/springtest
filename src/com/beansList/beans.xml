@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="department" class="com.beansList.DepartMent">
+        <property name="ems">
+             <list value-type="java.lang.String">
+                 <value>1#</value>
+                 <value>2#</value>
+             </list>
+        </property>
+        <property name="offices" >
+            <map>
+                <entry key="办公室" value="一楼"/>
+                <entry key="人事处" value="二楼"/>
+            </map>
+        </property>
+    </bean>
+</beans>
