@@ -17,7 +17,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Controller
+
 public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,  InitializingBean, DisposableBean
 {
     public Person() {
@@ -25,6 +25,15 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     }
 
 
+    private  Hair hair;
+
+    public Hair getHair() {
+        return hair;
+    }
+
+    public void setHair(Hair hair) {
+        this.hair = hair;
+    }
     private  String name;
     public void setName(String name) {
         System.out.println("属性注入setname---"+name);
@@ -50,7 +59,7 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
 
     public  void sayHi()
     {
-        System.out.println("--------------你好--"+this.name+"--------------------");
+        System.out.println("--------------你好--"+this.name+"---------我头发是"+hair.getColor()+"-----------");
     }
 
     @Override
@@ -81,4 +90,6 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     public void destroy() throws Exception {
         System.out.println("bean被dispose销毁了");
     }
+
+
 }
