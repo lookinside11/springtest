@@ -7,11 +7,7 @@
  </bean>
 <bean id="person2" class="com.autowirebean.Person" autowire="byType">
 </bean>
-
     <bean id="hair" class="com.autowirebean.Hair">
         <property name="hairColor" value="黑色"/>
     </bean>
-
-
-
 </beans>
