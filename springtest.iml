@@ -34,6 +34,6 @@
     </orderEntry>
     <orderEntry type="library" name="com.alibaba:druid:1.1.22" level="project" />
     <orderEntry type="library" name="cn.hutool:hutool-all:4.0.8" level="project" />
-    <orderEntry type="library" name="mysql:mysql-connector-java:8.0.20" level="project" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:5.0.5" level="project" />
   </component>
 </module>
