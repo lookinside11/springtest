@@ -20,6 +20,9 @@ import javax.annotation.PreDestroy;
 
 public class Person implements BeanNameAware, BeanFactoryAware, ApplicationContextAware,  InitializingBean, DisposableBean
 {
+
+    private Person person;
+
     public Person() {
         System.out.println("per是实体类被构造");
     }
@@ -32,6 +35,7 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
     }
 
     public void setHair(Hair hair) {
+        System.out.println("属性被注入到sethair。。。"+hair.getColor());
         this.hair = hair;
     }
     private  String name;
@@ -91,5 +95,11 @@ public class Person implements BeanNameAware, BeanFactoryAware, ApplicationConte
         System.out.println("bean被dispose销毁了");
     }
 
+
+    @Override
+    public String toString() {
+        String personDescribe="我叫“"+name+"”,头发是“"+hair.getColor()+"”";
+        return personDescribe;
+    }
 
 }

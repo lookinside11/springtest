@@ -1,3 +1,4 @@
+import com.beans.Hair;
 import com.beans.Person;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -13,7 +14,8 @@ public class testRun {
     public void show() throws Exception {
         ConfigurableApplicationContext ac=new ClassPathXmlApplicationContext("com/beans/beans(inject).xml");
         Person p1= ac.getBean("person",Person.class);
-        p1.sayHi();
+
+        System.out.println(p1);
         ac.registerShutdownHook();
 
 

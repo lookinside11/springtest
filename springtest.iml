@@ -6,6 +6,7 @@
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/spring-config.xml</file>
           <file>file://$MODULE_DIR$/src/com/beans/beans.xml</file>
+          <file>file://$MODULE_DIR$/src/com/beans/beans(inject).xml</file>
         </fileset>
       </configuration>
     </facet>

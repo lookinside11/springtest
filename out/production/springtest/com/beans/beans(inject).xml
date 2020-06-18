@@ -4,12 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="person" class="com.beans.Person">
-        <property name="name"   value="小张"/>
         <property name="hair"  >
             <bean id="hair" class="com.beans.Hair">
                 <property name="color" value="黑色"/>
             </bean>
         </property>
+        <property name="name"   value="小张"/>
     </bean>
 
 
