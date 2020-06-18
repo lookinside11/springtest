@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 
 public class testRunList {
@@ -31,6 +32,10 @@ public class testRunList {
             System.out.println(en.getKey()+"   --   "+en.getValue());
         }
 
-
+        Set<String> fulis=dp.getFulis();
+        for(String fuli:fulis)
+        {
+            System.out.println(fuli);
+        }
     }
 }

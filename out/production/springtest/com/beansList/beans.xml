@@ -24,8 +24,8 @@
         </property>
         <property name="tools">
             <list >
-                <ref bean="tool1"/>
-                <ref bean="tool2"/>
+                 <ref bean="tool1"/><ref bean="tool2"/>
+
             </list>
         </property>
     </bean>
