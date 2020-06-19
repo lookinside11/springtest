@@ -10,6 +10,7 @@
           <file>file://$MODULE_DIR$/src/com/beansList/beans.xml</file>
           <file>file://$MODULE_DIR$/src/com/autowirebean/beans(inject).xml</file>
           <file>file://$MODULE_DIR$/src/com/ASPECTJAOP操作/beans.xml</file>
+          <file>file://$MODULE_DIR$/src/com/ASPECTJAOP操作通过XML配置方式/beans.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -36,7 +37,15 @@
     <orderEntry type="library" name="com.alibaba:druid:1.1.22" level="project" />
     <orderEntry type="library" name="cn.hutool:hutool-all:4.0.8" level="project" />
     <orderEntry type="library" name="mysql:mysql-connector-java:5.0.5" level="project" />
-    <orderEntry type="library" name="aspectj:aspectjrt:1.5.3" level="project" />
-    <orderEntry type="library" name="aspectjweaver-1.9.5" level="project" />
+    <orderEntry type="library" name="org.aspectj:aspectjweaver:1.9.5" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/annotations-19.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
