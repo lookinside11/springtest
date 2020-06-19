@@ -24,7 +24,7 @@ public class Person {
 
     //@Autowired
     //@Qualifier(value = "裤子")
-    @Resource(name = "头发")
+    @Resource(name = "裤子")
     private Say hair;
 
 
