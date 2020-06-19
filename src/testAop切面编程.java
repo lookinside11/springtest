@@ -25,7 +25,7 @@ public class testAop切面编程 {
 
         Class[] interfaces={ISAY.class};
         男人类 man1=new 男人类();
-        ISAY newSay= (ISAY) Proxy.newProxyInstance(testAop切面编程.class.getClassLoader(),interfaces,new 加强功能类(womang));
+       ISAY newSay= (ISAY) Proxy.newProxyInstance(testAop切面编程.class.getClassLoader(),interfaces,new 加强功能类(womang));
         newSay.说话();
         newSay.吃饭();
     }
