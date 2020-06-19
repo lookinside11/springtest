@@ -17,6 +17,14 @@ public class testJDBCTemplate {
         ConfigurableApplicationContext ac=new ClassPathXmlApplicationContext("com/JDBCTemplate/beans.xml");
         BookService bs= (BookService) ac.getBean("bookservice");
 
+//        Book实体类 b1=new Book实体类();
+//        b1.setId(1);b1.setName("c++");b1.setPages("11页");
+//        Book实体类 b2=new Book实体类();
+//        b2.setId(2);b2.setName("delphi++");b2.setPages("22页");
+//
+//
+//
+//         bs.addBook(b1); bs.addBook(b2);
         List<Book实体类> books=bs.getAllBooks();
 
         for(Book实体类 book:books)

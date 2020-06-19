@@ -43,7 +43,7 @@ public class BookImpl implements BookDao{
     @Override
     public List<Book实体类> getAllBooks() {
         List<Book实体类> books;
-        books=jt.query("select * from books where id =?",new BeanPropertyRowMapper<Book实体类>(Book实体类.class),"1");
+        books=jt.query("select * from books  ",new BeanPropertyRowMapper<Book实体类>(Book实体类.class));
         return books;
     }
 
