@@ -7,7 +7,7 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <context:component-scan base-package="com.ASPECTJAOP操作通过注解方式" use-default-filters="true">
+    <context:component-scan base-package="com.JDBCTemplate" use-default-filters="true">
     </context:component-scan>
 
     <bean id="datasource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
