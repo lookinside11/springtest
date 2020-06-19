@@ -1,4 +1,5 @@
 package com.JDBCTemplate;
 
-public class Test {
+public interface BookDao {
+
 }

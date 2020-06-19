@@ -11,6 +11,7 @@
           <file>file://$MODULE_DIR$/src/com/autowirebean/beans(inject).xml</file>
           <file>file://$MODULE_DIR$/src/com/ASPECTJAOP操作/beans.xml</file>
           <file>file://$MODULE_DIR$/src/com/ASPECTJAOP操作通过XML配置方式/beans.xml</file>
+          <file>file://$MODULE_DIR$/src/com/JDBCTemplate/beans.xml</file>
         </fileset>
       </configuration>
     </facet>
